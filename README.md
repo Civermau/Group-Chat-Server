@@ -4,6 +4,7 @@ This program creates a simple chat server that allows multiple clients to connec
 
 ## Requirements
 User __must__ have JDK 22 to run this program 
+
 Can get it from here:
 > https://www.oracle.com/jp/java/technologies/downloads/
 
