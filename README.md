@@ -2,6 +2,9 @@
 
 This program creates a simple chat server that allows multiple clients to connect and send messages to each other. The server listens on port 7777 by default.
 
+## Requirements
+User __must__ have JDK 22 to run this program 
+
 ## Features:
 
 - Supports multiple clients
