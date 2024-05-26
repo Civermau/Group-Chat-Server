@@ -14,6 +14,7 @@ Can get it from here:
 - Displays server information (IP address and port) upon startup
 - Displays client connection and disconnection messages
 - Displays client usernames and messages in color for better readability
+- Displays date and time on the console for better log information
 
 ## Explanation of the Code
 
@@ -22,4 +23,5 @@ Can get it from here:
 - ClientListener.java: This class is a thread responsible for accepting new client connections. It waits for a new connection on the server socket, reads the username sent by the client, creates a new Client object, adds it to the connectedClients list, and starts a new thread for that client.
 UI.java: This class provides ANSI color codes for formatting server output messages in the console.
 
-![image](https://github.com/Civermau/GroupChatServer/assets/66493296/2d33e87e-0c24-4bca-b66f-5524b82f61db)
+![image](https://github.com/Civermau/GroupChatServer/assets/66493296/2cadeb69-f77f-4748-9c85-68673a2c7777)
+
