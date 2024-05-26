@@ -9,12 +9,12 @@ public class ClientListener extends Thread{
         InputStream inputStream;
         byte[] buffer = new byte[1024];
 
-        System.out.println("Waiting for new clients...");
+        UI.print("Waiting for new clients...");
         while (true){
             try {
                 tmpSocket = Program.server.accept();
 
-                System.out.println(UI.ANSI_GREEN + "New client found! IP: " + UI.ANSI_CYAN + tmpSocket.getInetAddress() + UI.ANSI_RESET);
+                UI.print(UI.ANSI_GREEN + "New client found! IP: " + UI.ANSI_CYAN + tmpSocket.getInetAddress() + UI.ANSI_RESET);
 
                 inputStream = tmpSocket.getInputStream();
                 int bytesRead = inputStream.read(buffer);
@@ -26,7 +26,7 @@ public class ClientListener extends Thread{
                 Program.connectedClients.add(tmpClient);
             }
             catch (IOException e) {
-                System.out.println("Client listener closed, unexpected error occurred!: " + e);
+                UI.print("Client listener closed, unexpected error occurred!: " + e);
             }
         }
     }

@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,16 +10,16 @@ public class Program {
     public static void main(String[] args) {
         try {
             server = new ServerSocket(7777);
-            connectedClients = new ArrayList<Client>();
+            connectedClients = new ArrayList<>();
 
-            System.out.println("Starting server at: " + server.getInetAddress().getHostAddress() + " with port: " + server.getLocalPort());
+            UI.print("Starting server at: " + server.getInetAddress().getHostAddress() + " with port: " + server.getLocalPort());
             System.out.println();
 
             ClientListener clientListener =  new ClientListener();
             clientListener.start();
         }
         catch (IOException e){
-            System.out.println("Server couldn't start, please try again");
+            UI.print("Server couldn't start, please try again");
         }
     }
 }
